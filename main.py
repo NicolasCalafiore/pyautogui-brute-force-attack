@@ -31,7 +31,7 @@ def passcrack(file_name):
 	symbols = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "+", "="]
 	for word in word_list[0::]:
 		if len(word) >= 6 and not any(symbol in word for symbol in symbols) and not word.isdigit() and any(char.isdigit() for char in word):
-		#  password length                  no symbols                          no all number pass                 atleast on digit
+		#  password length                  no symbols                          no all number pass           atleast one digit in pass
 			pyautogui.click(x=1419, y=576) # Selecting password field for MSP desktop application
 			pyautogui.hotkey('ctrl','a')
 			pyautogui.typewrite(word, interval=0.0001)
